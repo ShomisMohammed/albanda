@@ -1,0 +1,477 @@
+@font-face{
+  src: url(fonts/Cairo-Bold.ttf);
+  font-family:Cairo-Bold;
+}
+@font-face{
+  src: url(fonts/rika.ttf);
+  font-family:rika;
+}
+@font-face{
+  src: url(fonts/Harmattan-Regular.ttf);
+  font-family: Harmattan-Regular;
+}
+body ,ul ,li{
+margin: 0;
+padding: 0;  
+}
+p ,h2{
+  color: #7a7a7a;
+}
+a ,h1{
+  color: black;
+}
+h4{
+  color: white;
+}
+header{
+  background-color:#e4e4e4 ;
+  padding: 1px 0;
+}
+header h1{
+  margin-top: 0;
+  margin-bottom: 2px;
+  text-indent: -10000px;
+  background: url(img/logo.gif) no-repeat;
+  width: 130px;
+  height: 130px;
+  float: left;
+
+}
+header nav{
+  float: right;
+}
+header::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+header nav h2{
+  /*to get rid of the area that it takes */
+  line-height: 0;
+  margin: 0;
+  /*a trick to push that text to unseen area by the user */ 
+  text-indent: -10000px;
+}
+
+header nav li{
+  /*to get rid of the dots in front of the names*/
+  list-style-type: none;
+  float: left;
+  margin-left: 25px;
+  margin-top: 55px;
+  font-weight: bold;
+  font-size: large;
+  font-family:'Cairo-Bold';
+}
+header nav li a{
+text-decoration:none;
+}
+header nav li.current{
+  color: #3f8dbf;
+}
+
+header nav li a.current{
+  color: #3f8dbf;
+}
+
+body{
+  background-color:#f7f7f7 ;
+}
+.wrapper{
+  width: 96%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+#main-banner{
+  max-height: 850px;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+}
+#welcome-text{
+  position: absolute;
+  bottom: 15%;
+  /*add this to phone mode
+  top: -45px;
+  */
+  left: 2%;
+  right: 2%;
+  text-align: center;
+
+}
+
+.container h1{
+  color: white;
+  font-family: rika;
+  font-size: 120px;
+  margin-bottom: 30px;
+}
+.container h3{
+font-family: 'Cairo-bold';
+color: white;
+font-size: 40px;
+margin: 0;
+}
+.button {
+  background-color: #3f8dbe; /* Green */
+  border: none;
+  border-radius: 1em;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  font-family: 'Cairo-bold';
+  margin-top: 100px;
+}
+.features{
+    margin-top: 60px;
+}
+.features li{
+    float: left;
+    width: 21%;
+    padding: 1.5%;
+    text-align: center;
+    list-style-type: none;
+    line-height: 1.6em;
+    display:block;
+}
+.features li img{
+    height: 220px;
+}
+.features:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.features li h2{
+    font-family: 'Cairo-bold';
+}
+.features li p{
+    font-family: 'Harmattan-Regular';
+    font-size: larger;
+    margin: 20px 10px;
+    padding: 10px 10px;
+}
+#remainder{
+    background-color: white;
+    padding-top: 15px;
+    border-top: 2px solid #e4e4e4;
+    margin-top: 30px;
+    border-bottom: 2px solid #e4e4e4;
+}
+#remainder h1{
+  font-size: 70px;
+  font-family:'rika';
+  text-align: center;
+
+}
+footer{
+    background: #202020;
+    padding: 30px 0;
+    border-top: 10px solid #151515;
+    text-align: center;
+}
+footer h4{
+    font-family: 'Cairo-bold';
+    margin: 0;
+    font-size: 18px;
+}
+footer h4.number{
+    padding-top: 10px;
+  width: 150px;
+}
+footer ul{
+    float: left;
+    list-style-type: none;
+    margin: 0 5%;
+    width: 100%;
+    text-align: center;
+}
+footer ul li{
+    float: left;
+    width: 30%;
+    margin: 0;
+}
+
+
+footer:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+footer ul li img{
+    float: left;
+    height: 40px;
+}
+footer ul li div {
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+@media screen and (max-width:1000px){
+  .features li{
+    width:40%;
+    padding:0 5%;
+  }
+  .features li img{
+    padding-top:30px;
+  }
+}
+@media screen and (max-width:800px){
+  footer ul li{
+    width:100%;
+    padding-top:40px;
+    border-top:2px solid #7a7a7a;
+    border-bottom:2px solid #7a7a7a;
+  }
+  div.contacts{
+    padding-top:0;
+  }
+}
+ @media screen and (max-width:800px){
+  header nav{
+    float:none;
+
+  }
+  header ul{
+    margin-top:0;
+    padding-top:0;
+  }
+  header nav li{
+      margin-left:0;
+      width:33%;
+      text-align:center;
+      font-size:15px;
+      padding-bottom:30px;
+      margin-top:20px
+    }
+    header h1.logo{
+      float:none;
+      margin:0 auto 15px;
+    }
+   }
+   @media screen and (max-width:670px){
+     #welcome-text h1{
+       font-size:100px;
+     }
+     #welcome-text h3{
+       font-size:30px;
+     }
+     .button{
+       font-size:30px;
+     }
+   }
+   @media screen and (max-width:670px){
+     .features li{
+       width:90%;
+     }
+   }
+   @media screen and (max-width:540px){
+      #welcome-text h1{
+       font-size:80px;
+       margin-bottom:60px;
+     }
+     #welcome-text h3{
+       font-size:20px;
+     }
+     .button{
+       font-size:20px;
+     }
+   }
+   @media screen and (max-width:480px){
+      header nav li{
+        float:none;
+        width:100%;
+        margin:0;
+      }
+      header nav li{
+        padding-top:15px;
+        color:white;
+      }
+      header nav {
+        background:#555;
+      }
+      header .wrapper{
+        padding:0;
+        width:100%;
+      }
+      #mobile-nav{
+        width:100%;
+        height:40px;
+        background:url(img/menu-icon.png) no-repeat 98% center;
+        cursor: pointer;
+      }
+      header nav ul{
+          height:0;
+          overflow:hidden;
+        }
+        header nav ul.open{
+          height:auto;
+        }
+      }
+   @media screen and (max-width:380px){
+      #welcome-text h1{
+       font-size:65px;
+       margin-bottom:100px;
+     }
+     #welcome-text h3{
+       font-size:18px;
+     }
+     .button{
+       font-size:18px;
+     }
+     .features li img{
+      height:150px;
+    }
+   }
+
+   /* Other pages styles */
+   @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+body {
+background-color: #e4e4e4;
+font-family: "Roboto", helvetica, arial, sans-serif;
+font-size: 16px;
+font-weight: 400;
+text-rendering: optimizeLegibility;
+}
+
+div.table-title {
+ display: block;
+margin: auto;
+max-width: 600px;
+padding:5px;
+width: 100%;
+}
+
+.table-title h3 {
+ color: #202020;
+ text-align: center;
+ font-size: 40px;
+ font-weight: 400;
+ font-style:normal;
+ font-family: "Roboto", helvetica, arial, sans-serif;
+ text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+ text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+background: white;
+border-radius:3px;
+border-collapse: collapse;
+height: 320px;
+margin: auto;
+max-width: 600px;
+padding:5px;
+width: 100%;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+animation: float 5s infinite;
+}
+
+th {
+color:#D5DDE5;;
+background:#1b1e24;
+border-bottom:4px solid #9ea7af;
+border-right: 1px solid #343a45;
+font-size:23px;
+font-weight: 100;
+padding:24px;
+text-align:left;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+vertical-align:middle;
+}
+
+th:first-child {
+border-top-left-radius:3px;
+}
+
+th:last-child {
+border-top-right-radius:3px;
+border-right:none;
+}
+
+tr {
+border-top: 1px solid #C1C3D1;
+border-bottom-: 1px solid #C1C3D1;
+color:#666B85;
+font-size:16px;
+font-weight:normal;
+text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+background:#4E5066;
+color:#FFFFFF;
+border-top: 1px solid #22262e;
+}
+
+tr:first-child {
+border-top:none;
+}
+
+tr:last-child {
+border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+background:#4E5066;
+}
+
+tr:last-child td:first-child {
+border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+border-bottom-right-radius:3px;
+}
+
+td {
+background:#FFFFFF;
+padding:20px;
+text-align:left;
+vertical-align:middle;
+font-weight:300;
+font-size:18px;
+text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+border-right: 0px;
+}
+
+th.text-left {
+text-align: center;
+}
+
+th.text-center {
+text-align: center;
+}
+
+th.text-right {
+text-align: right;
+}
+
+td.text-left {
+text-align: center;
+}
+
+td.text-center {
+text-align: center;
+}
+
+td.text-right {
+text-align: right;
+}
